@@ -1,0 +1,13 @@
+.all {
+    position: relative;
+    padding-inline-start: 295px;
+    padding-inline-end: 20px;
+}
+@media (max-width: 991px) {
+    .main-comp{
+        padding: 0;
+    }
+    .all {
+        padding: 0;
+    }
+}

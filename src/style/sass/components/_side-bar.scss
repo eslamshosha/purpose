@@ -1,0 +1,243 @@
+.side-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  inset-inline-start: 0;
+  width: 272px;
+  height: 100vh;
+  z-index: 500;
+  background-color: $white;
+  flex: 1 0 auto;
+  justify-content: flex-start;
+  flex-direction: column;
+  display: flex;
+  will-change: left, right;
+  padding: 14px 0;
+  // position: fixed;
+  overflow-y: auto;
+  height: 100%;
+  padding-bottom: 20px;
+  @include tr;
+
+  .side-bar-head {
+    position: relative;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 32px;
+    text-decoration: none;
+    a {
+      position: relative;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      justify-content: center;
+    }
+    img {
+      max-width: 39px;
+    }
+
+    h2 {
+      color: $black;
+      font-size: 26px;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+    i {
+      font-size: 20px;
+      color: $hover;
+      display: none;
+    }
+  }
+}
+.board {
+  min-height: 100vh;
+}
+.side-nav-links {
+  ul {
+    list-style: none;
+    padding: 0;
+
+    .active {
+      background-color: #008aad;
+      color: $white;
+      border-radius: 73px;
+
+      a {
+        color: $white;
+      }
+    }
+  }
+  li {
+    display: block;
+    width: 100%;
+    margin-bottom: 24px;
+
+    a {
+      text-decoration: none;
+      color: #949494;
+      font-weight: 500;
+      font-size: 14px;
+      width: 100%;
+      display: block;
+      border-radius: 73px;
+      @include tr;
+
+      &:hover {
+        background-color: rgba(0, 138, 173, 0.1);
+      }
+      &.active:hover {
+        background-color: rgba(0, 138, 173, 0.5);
+      }
+    }
+
+    .a-p {
+      padding: 10px 35px;
+    }
+
+    i {
+      // margin-left: 16px;
+      font-size: 20px;
+      width: 22px;
+      margin-inline-end: 10px;
+    }
+  }
+}
+
+.css-1c35hjw-MuiPaper-root-MuiAccordion-root {
+  box-shadow: none !important;
+}
+
+// Accordion {
+//     max-height: 35px;
+// }
+
+.css-ahj2mt-MuiTypography-root {
+  font-weight: 500 !important;
+  font-family: "Avenir" !important;
+  font-size: 14px !important;
+  margin: 0 !important;
+  padding-inline-end: 35px;
+}
+
+.MuiTypography-root {
+  padding: 0 20px;
+}
+
+// .css-o4b71y-MuiAccordionSummary-content.Mui-expanded {
+//     margin: 0 !important;
+// }
+
+// .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded {
+//     min-height: 40px !important;
+//     margin-bottom: 15px;
+// }
+
+// .MuiPaper-root *{
+//     min-height: 0px !important;
+// }
+.css-15v22id-MuiAccordionDetails-root {
+  padding: 0 !important;
+}
+
+.in-li {
+  margin-bottom: 12px;
+}
+
+.accordion-li {
+  span,
+  i {
+    color: #949494;
+  }
+
+  .active {
+    span,
+    i {
+      color: $white !important;
+    }
+  }
+}
+//////////////////////////////////////////////////footer//////////////////////
+///
+.side-nav-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  .side-ancor {
+    font-weight: 500;
+    font-size: 14px;
+    color: $white;
+    background-image: linear-gradient(to right, #3286c2e3, #1e76b7);
+    width: 100%;
+    height: 38px;
+    border-radius: 6px;
+    background-size: 100%;
+    @include flexCenter;
+    @include tr;
+    &:hover {
+      background-size: 200%;
+    }
+  }
+  img {
+    margin: 30px 0 20px;
+    max-width: 130px;
+  }
+  a {
+    width: 100%;
+  }
+  .sagel {
+    font-weight: 500;
+    font-size: 14px;
+    color: $white;
+    background-image: linear-gradient(to right, #1e76b7, #3286c2e3);
+    width: 100%;
+    border-radius: 6px;
+    text-decoration: none;
+    background-size: 100%;
+    height: 32px;
+    @include tr;
+    @include flexCenter;
+    &:hover {
+      background-size: 200%;
+    }
+  }
+}
+
+///
+
+@media (max-width: 991px) {
+  .side-bar {
+    right: -272px;
+    .side-bar-head {
+      justify-content: space-between;
+      padding: 20px;
+      h2 {
+        display: none;
+      }
+
+      img {
+        width: 55px;
+        max-width: 100%;
+      }
+      i {
+        display: block;
+      }
+    }
+  }
+
+  .open {
+    right: 0;
+  }
+}
+
+.accordion-li {
+  .MuiPaper-root {
+    .MuiButtonBase-root[aria-expanded="true"] i {
+      display: inline-block;
+    }
+  }
+}
