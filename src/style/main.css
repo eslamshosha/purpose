@@ -3282,6 +3282,10 @@ html[dir=ltr] .second-btn {
   padding: 8px;
   border: none;
   margin-top: 24px;
+  transition: all 0.3s ease-in-out;
+}
+.subject-details button:hover {
+  background-color: var(--main-color);
 }
 
 .span-hint {

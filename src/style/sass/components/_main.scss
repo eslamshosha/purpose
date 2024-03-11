@@ -862,6 +862,10 @@
     padding: 8px;
     border: none;
     margin-top: 24px;
+    @include tr;
+    &:hover{
+      background-color: $main;
+    }
   }
 }
 
